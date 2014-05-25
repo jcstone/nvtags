@@ -1,3 +1,18 @@
+function getAjaxHuntData(hunt_number) {
+  $.ajax({
+    type: "GET",
+    url: "nvtags/ajax_hunt_data",
+    data: {hunt_number: hunt_number},
+    success: function(json) {
+      //var hunt_data = $.parseJSON(json);
+      // alert(foo.id); // alert(foo.name);
+      // etc.
+      console.log(json);
+    }
+  });
+}
+
+
 $( document ).ready(function() {
   $('#hunt-units').mapster(
     {
@@ -8,5 +23,11 @@ $( document ).ready(function() {
       }
     }
   );
-  alert('This worked')
+
+  $('#hunt_number_unit_group').change(function(){
+    getAjaxHuntData($(this).val());      
+  });
+
+
+
 });
