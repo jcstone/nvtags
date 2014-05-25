@@ -1,0 +1,2 @@
+class NvtagsController < ApplicationController
+end
