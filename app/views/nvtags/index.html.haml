@@ -1,11 +1,14 @@
-.nevada-map
-  = render partial: 'image_map'
-%table
-  -@hunt_1331.each do |hunt|
-    %tr
-      %td=hunt.unit_group
-      %td=hunt.draw_odds
-      %td=hunt.apps
+.row
+  .col-md-6
+    .nevada-map
+      = render partial: 'image_map'
+  .col-md-6
+    %table
+      -@hunt_1331.each do |hunt|
+        %tr
+          %td=hunt.unit_group
+          %td=hunt.draw_odds
+          %td=hunt.apps
 
 
   
