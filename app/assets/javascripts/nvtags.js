@@ -1,0 +1,1 @@
+$('#hunt-units').mapster();
