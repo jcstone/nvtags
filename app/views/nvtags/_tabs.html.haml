@@ -1,17 +1,54 @@
 / Nav tabs
 %ul.nav.nav-tabs
   %li.active
-    %a{"data-toggle" => "tab", href: "#home"} Home
+    %a{"data-toggle" => "tab", href: "#unit"} Unit Data
   %li
-    %a{"data-toggle" => "tab", href: "#profile"} Profile
+    %a{"data-toggle" => "tab", href: "#comparison"} Comparison
   %li
-    %a{"data-toggle" => "tab", href: "#messages"} Messages
-  %li
-    %a{"data-toggle" => "tab", href: "#settings"} Settings
+    %a{"data-toggle" => "tab", href: "#selected"} Selected Units
 / Tab panes
 .tab-content
-  #home.tab-pane.active
+  #unit.tab-pane.active
     #target
-  #profile.tab-pane ...
-  #messages.tab-pane ...
-  #settings.tab-pane ...
+      .row
+        .col-md-6
+          #unit-group
+          #draw-odds
+        .col-md-6
+          #apps
+          #tags-avail
+          #tags-sold
+          #percent-return
+      .row
+        .col-md-6
+          #number-of-successful-hunters
+          #percent-of-successful-hunters
+          #percent-4-plus-points
+        .col-md-6
+          %table.table
+            %thead
+              %th Point Class 1
+              %th Point Class 2
+              %th Point Class 3
+              %th Point Class 4
+              %th Point Class 5
+              %th Point Class 6+
+            %tbody
+              %tr
+                %td#point-class-1
+                %td#point-class-2
+                %td#point-class-3
+                %td#point-class-4
+                %td#point-class-5
+                %td#point-class-6
+          
+
+
+
+
+  #comparison.tab-pane
+    %h4 Coming Soon
+    %p Compare two units.
+  #selected.tab-pane
+    %h4 Coming Soon
+    %p Generate a printable list of the units you have selected

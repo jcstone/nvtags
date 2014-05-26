@@ -3,8 +3,9 @@
     .nevada-map
       = render partial: 'image_map'
   .col-md-6
-  = link_to "Data",nvtags_ajax_hunt_data_path
-  = collection_select(:hunt_number, :unit_group, HuntStat.uniq(:hunt_number), :hunt_number, :hunt_number)
+    .well
+      %h4 Select which hunt to view
+      = collection_select(:hunt_number, :unit_group, HuntStat.uniq(:hunt_number), :hunt_number, :hunt_number)
   .col-md-6
     =render partial: 'tabs'
 
