@@ -32,7 +32,7 @@ function generateHTML(current_unit) {
           '<div> Draw Odds:',
           current_unit[0]['draw_odds'],
           '</div>'
-          ].join(',')
+          ].join('')
 }
 
 
