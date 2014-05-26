@@ -3,9 +3,25 @@
     .nevada-map
       = render partial: 'image_map'
   .col-md-6
-    .well
-      %h4 Select which hunt to view
-      = collection_select(:hunt_number, :unit_group, HuntStat.uniq(:hunt_number), :hunt_number, :hunt_number)
+    .col-md-4
+      .panel.panel-success
+        .panel-heading
+          %h3.panel-title 
+            View:
+        .panel-body
+          .col-md-6
+            %span.glyphicon.glyphicon-picture
+              Map
+          .col-md-6
+            %span.glyphicon.glyphicon-th-list
+              List
+    .col-md-8  
+      .panel.panel-success
+        .panel-heading
+          %h3.panel-title 
+            Select Hunt:
+        .panel-body
+          = collection_select(:hunt_number, :unit_group, HuntStat.uniq(:hunt_number), :hunt_number, :hunt_number)
   .col-md-6
     =render partial: 'tabs'
 

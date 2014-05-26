@@ -72,7 +72,7 @@ $( document ).ready(function() {
   });
 
   $('area').click(function(){
-    var unitId = $(this).attr("id");
+    var unitId = $(this).attr("alt");
     var displayUnit = findSelectedUnits(unitId, hunt_data);
     displayData(displayUnit);
   });
