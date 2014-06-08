@@ -57,6 +57,9 @@ function displayData(current_unit) {
 
 
 $( document ).ready(function() {
+
+  getAjaxHuntData($('#hunt_number_unit_group').val());
+
   $('#hunt-units').mapster(
     {
       fillOpacity: 0.5,
