@@ -13,7 +13,7 @@ function getAjaxHuntData(hunt_number) {
 }
 
 //Not a reliable way of finding selected unit data, for instance clicking on unit 41
-//return 3 units that all contain 41... damn. Rethink this one. 
+//return 3 units that all contain 41... damn. Rethink this one.
 function findSelectedUnits(key, all_data) {
   var selected_unit = []
   for (var i = 0; i < all_data.length; i++) {
@@ -37,7 +37,7 @@ function findSelectedUnits(key, all_data) {
 }
 
 function displayData(current_unit) {
-  $('#unit-group').html("Unit Group: " + current_unit[0]['unit_group']);
+  $('#unit-group').html("<h4>Unit Group: " + current_unit[0]['unit_group'] + "</h4>");
   $('#draw-odds').html("Draw Odds: " + current_unit[0]['draw_odds']);
   $('#apps').html("Number of Applications: " + current_unit[0]['apps']);
   $('#tags-avail').html("Tags Available: " + current_unit[0]['tags_avail']);
@@ -69,13 +69,14 @@ $( document ).ready(function() {
   );
 
   $('#hunt_number_unit_group').change(function(){
-    getAjaxHuntData($(this).val()); 
+    getAjaxHuntData($(this).val());
   });
 
-  $('area').click(function(){
+  $('area').click(function(event){
     var unitId = $(this).attr("alt");
     var displayUnit = findSelectedUnits(unitId, hunt_data);
     displayData(displayUnit);
+    event.preventDefault();
   });
 
 
